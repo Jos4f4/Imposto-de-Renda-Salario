@@ -29,19 +29,17 @@ public class IrPerson implements Serializable {
 	private String cpf;
 	
 	private String cargo;
-	private Double salario;
 	
 	public IrPerson() {
 		
 	}
 
-	public IrPerson(Long id, String nome, String cpf, String cargo, Double salario) {
+	public IrPerson(Long id, String nome, String cpf, String cargo) {
 		super();
 		this.id = id;
 		this.nome = nome;
 		this.cpf = cpf;
 		this.cargo = cargo;
-		this.salario = salario;
 	}
 
 	public Long getId() {
@@ -76,14 +74,6 @@ public class IrPerson implements Serializable {
 		this.cargo = cargo;
 	}
 
-	public Double getSalario() {
-		return salario;
-	}
-
-	public void setSalario(Double salario) {
-		this.salario = salario;
-	}
-
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -92,7 +82,6 @@ public class IrPerson implements Serializable {
 		result = prime * result + ((cpf == null) ? 0 : cpf.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
-		result = prime * result + ((salario == null) ? 0 : salario.hashCode());
 		return result;
 	}
 
@@ -124,11 +113,6 @@ public class IrPerson implements Serializable {
 			if (other.nome != null)
 				return false;
 		} else if (!nome.equals(other.nome))
-			return false;
-		if (salario == null) {
-			if (other.salario != null)
-				return false;
-		} else if (!salario.equals(other.salario))
 			return false;
 		return true;
 	}

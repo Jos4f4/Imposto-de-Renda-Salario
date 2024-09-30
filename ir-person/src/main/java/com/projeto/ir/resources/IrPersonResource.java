@@ -49,7 +49,6 @@ public class IrPersonResource {
 		((IrPerson) entity).setNome(person.getNome());  
 		((IrPerson) entity).setCpf(person.getCpf());
 		((IrPerson) entity).setCargo(person.getCargo());
-		((IrPerson) entity).setSalario(person.getSalario());
 			
 		return repository.save(person);
 	}
