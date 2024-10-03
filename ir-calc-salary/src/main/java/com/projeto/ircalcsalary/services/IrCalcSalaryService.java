@@ -13,9 +13,9 @@ public class IrCalcSalaryService {
 	@Autowired
 	private IrPersonFeignClients irPersonFeignClient;
 	
-	public IrCalcSalary getIrCalcSalary(long personId, Double salario) {
+	public IrCalcSalary getIrCalcSalary(long personId, Double ir) {
 
 		IrPerson person = irPersonFeignClient.findById(personId).getBody();
-		return new IrCalcSalary(person.getNome(), person.getCpf(), person.getCargo(), salario);
+		return new IrCalcSalary(person.getNome(), person.getCpf(), person.getCargo(), person.getSalario(), ir);
 	}
 }

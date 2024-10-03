@@ -23,14 +23,14 @@ public class IrCalcSalaryResource {
 	
 	@Operation(summary = "Ir Calc Salary")
 	@HystrixCommand(fallbackMethod = "getIrCalcSalarytAlternative")
-	@GetMapping(value = "/{personId}/salario/{salario}")
-	public ResponseEntity<IrCalcSalary> getPayment(@PathVariable Long personId, @PathVariable Double salario){
-		IrCalcSalary calc = service.getIrCalcSalary(personId, salario);
+	@GetMapping(value = "/{personId}/salario/{ir}")
+	public ResponseEntity<IrCalcSalary> getIrCalcSalary(@PathVariable Long personId, Double salario,@PathVariable Double ir){
+		IrCalcSalary calc = service.getIrCalcSalary(personId, ir);
 		return ResponseEntity.ok(calc);
 	}
 	
-	public ResponseEntity<IrCalcSalary> getIrCalcSalarytAlternative(Long personId, Double salario){
-		IrCalcSalary calc = new IrCalcSalary("NOME", "CPF", "CARGO", salario);
+	public ResponseEntity<IrCalcSalary> getIrCalcSalarytAlternative(Long personId, Double salario, Double ir){
+		IrCalcSalary calc = new IrCalcSalary("NOME", "CPF", "CARGO", salario, ir );
 		return ResponseEntity.ok(calc);
 	}
 }
