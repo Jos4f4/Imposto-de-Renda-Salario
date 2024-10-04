@@ -12,7 +12,7 @@
 ### 
 ### {
 ###    "id": 6,
-###    "nome": "Jaona",
+###    "nome": "Joana",
 ###    "cpf": "00000000006",
 ###    "cargo": "Gerente de TI",
 ###    "salario": 15000.00
@@ -22,7 +22,7 @@
 ### http://localhost:8765/person/person
 ### {
 ###    "id": 6,
-###    "nome": "Jaona",
+###    "nome": "Joana",
 ###    "cpf": "00000000006",
 ###    "cargo": "Gerente de TI",
 ###    "salario": 16000.00
