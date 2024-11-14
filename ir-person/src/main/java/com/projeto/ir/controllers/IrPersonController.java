@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.projeto.ir.entities.IrPerson;
-import com.projeto.ir.resources.IrPersonResource;
+import com.projeto.ir.services.IrPersonService;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -22,7 +22,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 public class IrPersonController {
 	
 	@Autowired
-	private IrPersonResource service;
+	private IrPersonService service;
 	
 	@Operation(summary = "Find all persons")
 	@RequestMapping(method=RequestMethod.GET,

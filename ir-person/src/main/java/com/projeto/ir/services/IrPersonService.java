@@ -1,4 +1,4 @@
-package com.projeto.ir.resources;
+package com.projeto.ir.services;
 
 import java.util.List;
 
@@ -11,8 +11,8 @@ import com.projeto.ir.entities.IrPerson;
 import com.projeto.ir.repositories.IrPersonRepository;
 
 @Service
-public class IrPersonResource {
-	private Logger logger = LoggerFactory.getLogger(IrPersonResource.class);
+public class IrPersonService {
+	private Logger logger = LoggerFactory.getLogger(IrPersonService.class);
 	
 	@Autowired
 	IrPersonRepository repository;
